@@ -2,3 +2,5 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 npx lint-staged
+
+echo 푸시 하기전에 까먹은거 없는지 확인하기.
