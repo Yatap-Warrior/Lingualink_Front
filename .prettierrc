@@ -62,6 +62,13 @@
       "printWidth": 200,
       "parser": "markdown"       
     }
+  },
+  {      
+    "files": "*.yml",      
+    "options": {        
+      "printWidth": 200,
+      "parser": "yaml"       
+    }
   }
  ]
 
