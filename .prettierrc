@@ -67,6 +67,7 @@
     "files": "*.yml",      
     "options": {        
       "printWidth": 200,
+      "singleQuote": false, 
       "parser": "yaml"       
     }
   }

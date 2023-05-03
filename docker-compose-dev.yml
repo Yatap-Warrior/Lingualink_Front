@@ -1,0 +1,24 @@
+version: "3"
+services:
+  proxy:
+    container_name: linglink-proxy
+    image: nginx:latest
+    restart: always
+    ports:
+      - "80:80"
+    extra_hosts:
+      - host.docker.internal:host-gateway
+
+  prod-frontend:
+    container_name: linglink-front
+    image: east8237/linglink-front
+    restart: always
+    ports:
+      - "3001:3000"
+
+  prod-backend:
+    container_name: linglink-back
+    image: gardenee/linglink-back
+    restart: always
+    ports:
+      - "8081:8080"
