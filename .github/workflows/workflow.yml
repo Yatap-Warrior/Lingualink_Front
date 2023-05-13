@@ -38,9 +38,10 @@ jobs:
       - name: Docker Compose Up
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.EC2_HOST }} # EC2 ip
-          username: ${{ secrets.AWS_ID }}
-          key: ${{ secrets.EC2_KEY }} # pem key
+          host: ${{ secrets.REMOTE_IP }}
+          username: ${{ secrets.REMOTE_SSH_ID }}
+          key: ${{ secrets.REMOTE_SSH_KEY }}
+          port: ${{ secrets.REMOTE_SSH_PORT }}
           # sudo docker-compose down: docker compose안의 서비스 컨테이너 종료 및 삭제
           # sudo docker system prune -a: 사용하지 않는 docker resource 제거(container, image, volume, network)
           script: |
