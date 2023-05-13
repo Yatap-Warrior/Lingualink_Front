@@ -1,3 +1,5 @@
 .prettierrc
 dist
 *.conf
+.github
+.husky
