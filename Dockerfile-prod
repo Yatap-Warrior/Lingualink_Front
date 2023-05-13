@@ -11,4 +11,4 @@ COPY . /usr/src/app
 RUN yarn
 #CMD [ "yarn", "dev", "&" ]
 
-ENTRYPOINT ["/run_script.sh"]
+ENTRYPOINT ["run_script.sh"]
