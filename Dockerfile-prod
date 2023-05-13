@@ -9,4 +9,6 @@ COPY package.json /usr/src/app/package.json
 # 소스를 작업폴더로 복사하고 빌드
 COPY . /usr/src/app
 RUN yarn
-CMD [ "yarn", "dev", "&" ]
+#CMD [ "yarn", "dev", "&" ]
+
+ENTRYPOINT ["/run_script.sh"]
