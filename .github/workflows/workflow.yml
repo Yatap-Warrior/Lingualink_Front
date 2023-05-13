@@ -26,6 +26,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+      
       - name: Build and push
         uses: docker/build-push-action@v4
         with:
@@ -38,7 +39,7 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.EC2_HOST }} # EC2 ip
-          username: GithubActions
+          username: ${{ secrets.AWS_ID }}
           key: ${{ secrets.EC2_KEY }} # pem key
           # sudo docker-compose down: docker compose안의 서비스 컨테이너 종료 및 삭제
           # sudo docker system prune -a: 사용하지 않는 docker resource 제거(container, image, volume, network)
