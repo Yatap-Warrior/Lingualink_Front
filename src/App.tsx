@@ -19,7 +19,7 @@ const App = (): ReactElement => {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>링구링구</h1>
+      <h1>🫥</h1>
       <div className="card">
         <button onClick={increaseCount}>
           count is
