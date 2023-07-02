@@ -13,6 +13,7 @@ services:
     depends_on:
       - linglink-front
       - linglink-back
+    platform: linux/arm64/v8
 
   linglink-front:
     container_name: linglink-front
@@ -22,6 +23,7 @@ services:
       - "3000:3000"
     extra_hosts:
       - host.docker.internal:host-gateway
+    platform: linux/amd64
 
   linglink-back:
     container_name: linglink-back
@@ -31,3 +33,4 @@ services:
       - "8080:8080"
     extra_hosts:
       - host.docker.internal:host-gateway
+    platform: linux/amd64
