@@ -51,7 +51,9 @@
     "react/button-has-type": 0,
     "no-shadow": 0, // outer 스코프 변수 사용
     "import/no-extraneous-dependencies": ["error", { "devDependencies": ["**/*.config.ts", "**/*.test.ts", "**/*.spec.ts"] }], // 환경설정, 테스트파일에서는 devDependency 허용
-    "operator-linebreak": 0 // 연산자가 있을 때 줄바꿈 제한
+    "operator-linebreak": 0, // 연산자가 있을 때 줄바꿈 무시
+    "no-confusing-arrow": "off",
+    "object-curly-newline": "off"
   },
   "settings": {
     "react": {

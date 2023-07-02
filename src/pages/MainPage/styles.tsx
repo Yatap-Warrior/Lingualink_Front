@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import logo from '../../util/images/LingualinkLogo.png';
 
 const WholeWrapper = styled.div`
   display: flex;
@@ -15,4 +16,17 @@ const WholeWrapper = styled.div`
   user-select: none;
 `;
 
-export { WholeWrapper };
+const Logo = styled.img.attrs({
+  src: `${logo}`,
+})`
+  object-fit: contain;
+  margin-top: 60px;
+  height: 150px;
+`;
+
+const ButtonWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+export { WholeWrapper, Logo, ButtonWrapper };
